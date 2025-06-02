@@ -1,0 +1,30 @@
+var text1 = 0;
+//500000000 to win! there's a secret...
+
+draw= function() {
+if (mouseX<5&&mouseY<495) {  text1+=100;   }
+if (mouseX>350&&mouseY<50&&text1>100000) {  text1+=10;   }
+ if (mouseX<50&&mouseY<50&&text1>10000) {  text1+=5;   }  
+ if (mouseX>350&&mouseY>350) {  text1+=2;   }  
+background(148, 57, 30);
+fill(13, 255, 0);
+rect(350, 350, 50, 50, 10);
+fill(145, 142, 142);
+if(text1>10000) {fill(252, 5, 13);}
+rect(0, 0, 50, 50, 10);
+fill(145, 142, 142);
+if(text1>100000) {fill(25, 5, 250);}
+rect(350, 0, 50, 50, 10);
+
+noStroke();
+fill(148, 57, 30);
+if(text1>1000000){ 
+fill(250, 5, 242); }
+rect(0, 395, 5, 5);
+fill(247, 247, 247);
+textSize(28);
+text(text1, 150, 185, 500,500);
+if(text1>50000000){ background(176, 169, 39); text("you win", 200, 200, 500, 500); }
+
+
+};
